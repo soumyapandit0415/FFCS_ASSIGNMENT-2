@@ -110,7 +110,7 @@ export default function App() {
       {showMethod === null && <Text style={styles.header}>API</Text>}
       {showMethod === "GET" && (
         <View style={styles.methodContainer}>
-          <Text style={styles.header}></Text>
+          <Text style={styles.header}>GET method!</Text>
           <TextInput
             placeholder="ID"
             style={styles.input}
@@ -121,7 +121,7 @@ export default function App() {
             title="Fetch"
             style={styles.button}
             onPress={fetchUser}
-            color="#6EB4D5"
+            color="black"
           />
           <Text>Name: {getName}</Text>
         </View>
@@ -157,7 +157,7 @@ export default function App() {
             title="Post"
             style={styles.button}
             onPress={addUser}
-            color="#6EB4D5"
+            color="black"
           />
         </View>
       )}
@@ -187,7 +187,7 @@ export default function App() {
             title="Post"
             style={styles.button}
             onPress={updateUser}
-            color="#6EB4D5"
+            color="black"
           />
         </View>
       )}
@@ -204,7 +204,7 @@ export default function App() {
             title="Post"
             style={styles.button}
             onPress={deleteUser}
-            color="#6EB4D5"
+            color="black"
           />
         </View>
       )}
@@ -213,28 +213,28 @@ export default function App() {
           title="GET"
           style={[styles.button, styles.optionsButton]}
           onPress={() => setShowMethod("GET")}
-          color="#6EB4D5"
+          color="black"
         />
 
         <Button
           title="POST"
           style={[styles.button, styles.optionsButton]}
           onPress={() => setShowMethod("POST")}
-          color="#6EB4D5"
+          color="black"
         />
 
         <Button
           title="PUT"
           style={[styles.button, styles.optionsButton]}
           onPress={() => setShowMethod("PUT")}
-          color="#6EB4D5"
+          color="black"
         />
 
         <Button
           title="DELETE"
           style={[styles.button, styles.optionsButton]}
           onPress={() => setShowMethod("DELETE")}
-          color="#6EB4D5"
+          color="black"
         />
       </View>
       <StatusBar style="auto" />
@@ -249,13 +249,15 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "beige",
     alignItems: "center",
     justifyContent: "center",
+    padding: 20,
   },
   button: {
     height: 40,
-    paddingHorizontal: 20,
+    paddingHorizontal: 10,
+    padding: 20,
     borderRadius: 20,
     marginBottom: 10,
   },
@@ -274,9 +276,11 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     position: "absolute",
     bottom: 60,
+    padding: 20,
   },
   methodContainer: {
     position: "absolute",
-    top: 70,
+    top: 80,
+    padding: 20,
   },
 });
